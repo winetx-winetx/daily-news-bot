@@ -27,7 +27,8 @@ jobs:
       - name: Run news push
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
-          FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+          # 注意这里：等号左边是代码要用的变量名，右边是你 GitHub 里实际配置的 Secret 名字
+          FEISHU_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
           TOPICS: "融资,风险投资,创业融资,VC投资,创投"
         run: |
           python scripts/news_bot.py --once --topics "融资,风险投资,创业融资,VC投资,创投"
