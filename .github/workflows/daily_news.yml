@@ -28,6 +28,6 @@ jobs:
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
-          TOPICS: "AI大模型,具身智能,每日财经热点"
+          TOPICS: "融资,风险投资,创业融资,VC投资,创投"
         run: |
-          python scripts/news_bot.py --once --topics "AI大模型,具身智能,每日财经热点"
+          python scripts/news_bot.py --once --topics "融资,风险投资,创业融资,VC投资,创投"
